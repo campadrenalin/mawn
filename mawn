@@ -1,0 +1,28 @@
+#!/bin/bash
+
+search() {
+    FILES="`grep -il ${2} ${1}`";
+    if [ -z "$FILES" ]; then
+        echo "No matches were found.";
+    else
+        head -qn1 $FILES;
+    fi;
+    return 0;
+}
+
+# Interpret command-line args
+parse() {
+    SEARCHPATH="."
+    TOTAL=$#
+    i=1
+    for ARGUMENT in $@; do
+        if [ $i -ne $TOTAL ]; then
+            SEARCHPATH="$SEARCHPATH/$ARGUMENT";
+        else
+            search "$SEARCHPATH/*" "$ARGUMENT"
+        fi
+        i=$[$i + 1];
+    done
+}
+
+parse $@;

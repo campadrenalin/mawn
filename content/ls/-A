@@ -1,0 +1,4 @@
+FLAG -A, --almost-all : Do not list implied . and ..
+
+    Like the -a option, this will list any hidden files, but omits the
+    metafolders '.' and '..".

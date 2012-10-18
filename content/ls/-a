@@ -1,0 +1,4 @@
+FLAG -a : Do not ignore entries starting with .
+
+    Normally, ls will ignore directories like '.', '..', and '.gitignore',
+    but you can always use the -a flag to list *everything*.

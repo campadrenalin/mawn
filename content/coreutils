@@ -1,0 +1,7 @@
+Core POSIX shell utilities
+
+ * ls : Lists the content of a directory.
+ * cd : Switches to a different directory, lets you move around.
+ * grep : Text search program.
+ * vim : A text editor. Very powerful, not very user-friendly.
+ * nano: An easy-to-use text editor.
