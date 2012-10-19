@@ -4,6 +4,7 @@ if [ -z "$MAWNDIR" ]; then
     #MAWNDIR="/usr/share/mawn/";
     MAWNDIR="./content";
 fi
+WIDTH=`tput cols`;
 
 search() {
     FILES="`grep -il ${2} ${1}`";
@@ -19,7 +20,7 @@ listmain() {
     DIRPATH="$1";
     FILES="`find $DIRPATH/* -maxdepth 0 -type f|sort|grep -v __MAIN__`"
     CATEGORIES="`find $DIRPATH/* -mindepth 1 -maxdepth 1 -name __MAIN__ -type f|sort 2>/dev/null`"
-    cat $DIRPATH/__MAIN__;
+    fold -sw $WIDTH $DIRPATH/__MAIN__;
     if [ "`echo $FILES | wc -c`" -gt "1" ]; then
         echo "
 
@@ -52,7 +53,7 @@ parse() {
             if [ -f "$MAINPATH" ]; then
                 listmain "$DIRECTPATH";
             elif [ -f "$DIRECTPATH" ]; then
-                cat "$DIRECTPATH";
+                fold -sw $WIDTH "$DIRECTPATH";
             else
                 search "$SEARCHPATH/*" "$ARGUMENT";
             fi
