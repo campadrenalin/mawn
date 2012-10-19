@@ -1,0 +1,5 @@
+FLAG --author : Print the author of each file.
+
+    When using the -l tag for more detailed output, you can
+    use the --author flag to print out an extra column for
+    the author of the file or folder.

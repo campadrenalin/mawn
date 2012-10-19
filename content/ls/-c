@@ -1,0 +1,16 @@
+FLAG -c : Show and sort by ctime
+
+    "ctime" is a piece of data representing the last time
+    that the file status information was modified.
+
+    This flag behaves differently depending on what other
+    flags are present:
+
+WITH -lt:
+    Sorts by and shows ctime column
+
+WITH -l:
+    Shows ctime and sorts by name
+
+OTHERWISE:
+    Just sort by ctime.

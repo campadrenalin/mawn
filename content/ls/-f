@@ -1,0 +1,13 @@
+FLAG -f : Don't sort, enable -aU, disable -ls --color.
+
+    This flag does a bunch of things at once.
+
+1. List all the stuff in the folder (-a)
+2. Don't sort, use the order the filesystem has (-U)
+3. Disables long-form output (-l disabled)
+4. Disables printing filesize (-s disabled)
+5. Disables colored output (--color disabled)
+
+    For this kind of flag, order matters. I can have my -f
+    and --color too, as long as I remember to put the
+    --color flag AFTER the -f flag, for example.

@@ -1,0 +1,39 @@
+FLAG -F, --classify : Append indicator to entries
+
+    Indicators are one-character sigils to... indicate
+    things about the files. The -F flag adds indicators
+    to the end of every entry with an interesting nature:
+
+somefile
+
+    No indicator, just a regular file
+
+someprogram*
+
+    A file that's marked as executable.
+
+somedirectory/
+
+    A directory.
+
+symboliclink@
+
+    A link to another place in the filesystem.
+
+    "mawn ln" for more details.
+
+somefifo|
+
+    A FIFO is like a pipe and a file at the same time.
+
+    "mawn mkfifo" for more details.
+
+unixsocket=
+
+    A UNIX socket, for network-like communication over the
+    local machine. Used in things like MySQL.
+
+somedoor>
+
+    A type of local procedure call. Not used very widely,
+    mostly on Solaris.

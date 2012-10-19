@@ -1,0 +1,6 @@
+FLAG -g : Like -l, but do not list owner.
+
+    Equivalent to "-lG". Prints in long format, minus the
+    files' group information.
+
+    See "mawn ls -l" and "mawn ls -G".

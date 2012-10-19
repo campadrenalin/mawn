@@ -1,0 +1,8 @@
+FLAG -d, --directory : Don't list directory contents
+
+    This flag will prevent ls from doing what it usually
+    does with directory arguments - expand them. If I'm
+    in my home folder, and I do "ls *", it will print
+    out the contents of every subfolder in my home folder.
+    If I do "ls -d *", the results will be ironically less
+    trippy, and equivalent to regular old "ls".

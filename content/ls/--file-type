@@ -1,0 +1,4 @@
+FLAG --file-type : Like -F, but without * indicator.
+
+    Does the same thing as "ls -F", only it doesn't mark
+    executable files with the * indicator.

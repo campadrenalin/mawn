@@ -1,0 +1,6 @@
+FLAG --full-time : Prints out long version of time.
+
+    Where timestamps are displayed, print out the full iso
+    format of that timestamp.
+
+    Equivalent to "-l --time-style=full-iso"

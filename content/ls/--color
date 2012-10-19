@@ -1,0 +1,24 @@
+FLAG --color[=WHEN] : Colorize the output.
+
+    ls determines when to make the output colorful based on
+    two things: the LS_COLORS environmental variable, and
+    the --color flag, which overrides it.
+
+--color=never
+
+    Don't colorize anything.
+
+--color=auto
+
+    Colorize only when outputting to a terminal. This means
+    that the color codes won't be, say, passed down a pipe
+    to some other program that can't interpret them.
+
+    This is what the default setting for LS_COLORS is on
+    many desktop distros, tied with "never".
+
+--color=always
+
+    Colorize no matter where the output is going. This is
+    useful if you want to pass color codes into a pipe or
+    file on purpose.

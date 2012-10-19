@@ -1,0 +1,27 @@
+FLAG --block-size=SIZE : Control the way filesize is printed.
+
+    This flag lets you explicitly say what units you want
+    filesize printed in. Default is bytes, but when working
+    with large files, those can be painfully small units to
+    reason in.
+
+    This option does nothing if filesize isn't already
+    being printed, usually through -l.
+
+--block-size=KB
+
+    Print file sizes in kilobytes (1000 bytes)
+
+--block-size=K
+
+    Print file sizes in kibibytes (1024 bytes)
+
+--block-size=MB
+
+    Print file sizes in megabytes (1000 kilobytes, 1000 x 1000 bytes)
+
+--block-size=M
+
+    Print file sizes in mebibytes (1024 kibibytes, 1024 x 1024 bytes)
+
+And so on, for G, T, P, E, Z, and Y.

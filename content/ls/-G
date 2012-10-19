@@ -1,0 +1,4 @@
+FLAG -G, --no-group : Don't print group names.
+
+    Long format usually prints out the file's "group", but
+    the -G flag disables that column.

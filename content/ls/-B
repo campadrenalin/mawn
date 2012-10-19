@@ -1,0 +1,9 @@
+FLAG -B, --ignore-backups : Do not list implied entries ending with ~
+
+    Files that end with ~ are generally backup files from
+    various programs. -B will make ls ignore them - except
+    ones you specifically list in the arguments.
+
+    For example, let's say you were in a folder with two
+    files, X~ and Y~. "ls -B" would list neither of them.
+    "ls -B X~" would list X~ but not Y~.

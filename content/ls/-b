@@ -1,0 +1,7 @@
+FLAG -b, --escape : Print C-style escapes for nongraphic characters.
+
+    On most POSIX-y platforms like Linux, you can have some
+    pretty crazy filenames, with special characters. This
+    flag changes the way they are displayed.
+
+    TODO: More detailed explanation.

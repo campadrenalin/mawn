@@ -1,0 +1,32 @@
+FLAG --format=WORD : Set the output format.
+
+    This flag is basically the long (but more readable) way
+    of using flags like -l and -C.
+
+--format=across
+
+    Equivalent to "-x"
+
+--format=commas
+
+    Equivalent to "-m"
+
+--format=horizontal
+
+    Equivalent to "-x"
+
+--format=long
+
+    Equivalent to "-l"
+
+--format=single-column
+
+    Equivalent to "-1"
+
+--format=verbose
+
+    Equivalent to "-l"
+
+--format=vertical
+
+    Equivalent to "-C"
