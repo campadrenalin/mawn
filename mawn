@@ -17,14 +17,21 @@ search() {
 
 listmain() {
     DIRPATH="$1";
-    OTHERS="`find $DIRPATH/* -maxdepth 0 -type f|sort|grep -v __MAIN__`"
+    FILES="`find $DIRPATH/* -maxdepth 0 -type f|sort|grep -v __MAIN__`"
+    CATEGORIES="`find $DIRPATH/* -mindepth 1 -maxdepth 1 -name __MAIN__ -type f|sort 2>/dev/null`"
     cat $DIRPATH/__MAIN__;
-    if [ "`echo $OTHERS | wc -c`" -gt "1" ]; then
+    if [ "`echo $FILES | wc -c`" -gt "1" ]; then
         echo "
 
     MORE INFO:
 ";
-        head -qn1 $OTHERS;
+        head -qn1 $FILES;
+    fi
+    if [ "`echo $CATEGORIES | wc -c`" -gt "1" ]; then
+        echo "
+    SUBCATEGORIES:
+";
+        head -qn1 $CATEGORIES;
     fi
 }
 

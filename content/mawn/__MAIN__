@@ -1,0 +1,7 @@
+mawn : Non-paging, search-friendly man page system
+
+    mawn [CATEGORY]... [SEARCH TERM]
+
+Mawn is designed to help you find what you're actually looking for, fast, and in easy-to-understand terminology, without taking over your console. This includes providing not only explanations of flags, syntax, and purpose, but also extensive catalogs of recipes and general help administrating your system.
+
+To use mawn, type what you're looking for. If there's a specific page or category for that keyword, mawn will use that, but if not, it will do a search. This is easiest to understand by looking at some of the provided examples.
