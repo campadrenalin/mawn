@@ -6,7 +6,7 @@ fi
 WIDTH=`tput cols`;
 
 search() {
-    if [ -f "${1}/*" ]; then
+    if [ -d "${1}" ]; then
         FILES="`grep -il ${2} ${1}/*`";
         if [ -z "$FILES" ]; then
             echo "No matches were found.";
