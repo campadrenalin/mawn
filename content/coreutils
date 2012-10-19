@@ -1,4 +1,4 @@
-Core POSIX shell utilities
+coreutils : Core POSIX shell utilities
 
  * ls : Lists the content of a directory.
  * cd : Switches to a different directory, lets you move around.

@@ -1,0 +1,7 @@
+ls : List directory contents
+
+    ls [OPTION]... [FILE]...
+
+List information about the FILEs (the current directory by default).  Sort entries alphabetically if not otherwise specified with options like -cftuvSUX or --sort.
+
+Mandatory arguments to long options are mandatory for short options too.

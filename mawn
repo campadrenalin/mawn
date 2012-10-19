@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -z "$MAWNDIR" ]; then
+    #MAWNDIR="/usr/share/mawn/";
+    MAWNDIR="./content";
+fi
+
 search() {
     FILES="`grep -il ${2} ${1}`";
     if [ -z "$FILES" ]; then
@@ -10,16 +15,40 @@ search() {
     return 0;
 }
 
+listmain() {
+    DIRPATH="$1";
+    OTHERS="`find $DIRPATH/* -maxdepth 0 -type f|sort|grep -v __MAIN__`"
+    cat $DIRPATH/__MAIN__;
+    if [ "`echo $OTHERS | wc -c`" -gt "1" ]; then
+        echo "
+
+    MORE INFO:
+";
+        head -qn1 $OTHERS;
+    fi
+}
+
 # Interpret command-line args
 parse() {
-    SEARCHPATH="."
+    SEARCHPATH="$MAWNDIR"
     TOTAL=$#
     i=1
+    if [ "$TOTAL" -eq "0" ]; then
+        listmain "$SEARCHPATH";
+    fi
     for ARGUMENT in $@; do
         if [ $i -ne $TOTAL ]; then
             SEARCHPATH="$SEARCHPATH/$ARGUMENT";
         else
-            search "$SEARCHPATH/*" "$ARGUMENT"
+            DIRECTPATH="$SEARCHPATH/$ARGUMENT";
+            MAINPATH="$DIRECTPATH/__MAIN__";
+            if [ -f "$MAINPATH" ]; then
+                listmain "$DIRECTPATH";
+            elif [ -f "$DIRECTPATH" ]; then
+                cat "$DIRECTPATH";
+            else
+                search "$SEARCHPATH/*" "$ARGUMENT";
+            fi
         fi
         i=$[$i + 1];
     done
