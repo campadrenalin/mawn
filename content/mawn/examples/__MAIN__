@@ -1,1 +1,31 @@
 mawn examples : Examples of using Mawn.
+
+Let's say you want to know about the command 'ls'.
+
+    mawn ls
+
+Hmm... that '-a' flag looks interesting...
+
+    mawn ls -a
+
+Uh oh, my graphics stack broke somewhere...
+
+    mawn graphics
+
+Sounds like a driver issue.
+
+    mawn graphics drivers
+
+How do I find out what driver I have?
+
+    mawn graphics drivers "how do i"
+
+The above command searches the "graphics drivers" category for "how do i". You might have more luck with "finding" for this search, though, as in "Finding your graphics driver"...
+
+    mawn graphics drivers finding
+
+K, that was easy. Ran a few commands recommended in there, and it looks like I have an integrated Intel chip. Let's search for more specific information there...
+
+    mawn graphics drivers intel
+
+Et voila, a list of Intel graphics drivers that have mawn pages.
