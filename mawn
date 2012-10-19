@@ -1,19 +1,24 @@
 #!/bin/bash
 
 if [ -z "$MAWNDIR" ]; then
-    #MAWNDIR="/usr/share/mawn/";
-    MAWNDIR="./content";
+    MAWNDIR="/usr/share/mawn";
 fi
 WIDTH=`tput cols`;
 
 search() {
-    FILES="`grep -il ${2} ${1}`";
-    if [ -z "$FILES" ]; then
-        echo "No matches were found.";
+    if [ -f "${1}/*" ]; then
+        FILES="`grep -il ${2} ${1}/*`";
+        if [ -z "$FILES" ]; then
+            echo "No matches were found.";
+            return 1;
+        else
+            head -qn1 $FILES;
+        fi;
+        return 0;
     else
-        head -qn1 $FILES;
-    fi;
-    return 0;
+        echo "No such category";
+        return 1;
+    fi
 }
 
 listmain() {
@@ -47,6 +52,11 @@ parse() {
     for ARGUMENT in $@; do
         if [ $i -ne $TOTAL ]; then
             SEARCHPATH="$SEARCHPATH/$ARGUMENT";
+            if [ -z "$CATEGORY" ]; then
+                CATEGORY="$ARGUMENT";
+            else
+                CATEGORY="$CATEGORY $ARGUMENT";
+            fi
         else
             DIRECTPATH="$SEARCHPATH/$ARGUMENT";
             MAINPATH="$DIRECTPATH/__MAIN__";
@@ -55,7 +65,8 @@ parse() {
             elif [ -f "$DIRECTPATH" ]; then
                 fold -sw $WIDTH "$DIRECTPATH";
             else
-                search "$SEARCHPATH/*" "$ARGUMENT";
+                echo "Searching category '$CATEGORY' for '$ARGUMENT'";
+                search "$SEARCHPATH" "$ARGUMENT";
             fi
         fi
         i=$[$i + 1];
