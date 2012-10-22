@@ -1,0 +1,6 @@
+FLAG -I, --ignore=PATTERN : Hide some results from the output.
+
+    Equivalent to --hide=PATTERN, only the -a and -A flags
+    cannot override it.
+
+    See "mawn ls --hide" for more information.

@@ -1,0 +1,31 @@
+FLAG --indicator-style=WORD : Specify what indicators to use.
+
+    This flag lets you control which indicator characters
+    are used to describe entries in the results. Almost all
+    of them have equivalent short versions, which you can
+    look up for more information about indicators.
+
+--indicator-style=none
+
+    Default. No indicators. Useful for overriding other
+    flags.
+
+--indicator-style=slash
+
+    Append / to the end of directory entries.
+
+    Equivalent to -p.
+
+--indicator-style=file-type
+
+    Use all indicators except '*' (otherwise used to label
+    files as executable).
+
+    Equivalent to --file-type.
+
+--indicator-style=classify
+
+    Use all indicator types, don't hold back.
+
+    Equivalent to -F.
+

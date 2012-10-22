@@ -6,3 +6,6 @@ FLAG -d, --directory : Don't list directory contents
     out the contents of every subfolder in my home folder.
     If I do "ls -d *", the results will be ironically less
     trippy, and equivalent to regular old "ls".
+
+    This flag also prevents the dereferencing of symbolic
+    links.

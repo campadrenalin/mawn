@@ -1,0 +1,5 @@
+FLAG -h, --human-readable : Print sizes in human-readable format
+
+    When used with the -l flag, the size column is printed
+    in units that make sense for the actual size of the
+    file. A bit like --block-size on autopilot.

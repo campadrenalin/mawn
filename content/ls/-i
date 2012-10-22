@@ -1,0 +1,9 @@
+FLAG -i, --inode : Print the inode number of each file.
+
+    UNIX systems assign unique "inode numbers" to files.
+    A file can be in two different places, if both those
+    places point to the same inode - and changes to one
+    place will affect the other, because it's the same
+    file underneath.
+
+    You can use the -i flag to get a peak under the hood.

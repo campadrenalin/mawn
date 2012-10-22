@@ -1,0 +1,5 @@
+FLAG -k : Print sizes in blocks of 1K.
+
+    Equivalent to "--block-size=1K".
+
+    See "mawn ls --block-size" for more information.

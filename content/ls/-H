@@ -1,0 +1,9 @@
+FLAG -H, --dereference-command-line : Follow explicitly listed symlinks
+
+    By default, ls follows symlinks. But some flags disable
+    this behavior, so you can more safely list directory
+    contents in situations where you could end up in an
+    endless loop.
+
+    This flag overrides THOSE flags, but only for paths
+    explicitly included in the parameter list.

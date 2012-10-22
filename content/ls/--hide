@@ -1,0 +1,19 @@
+FLAG --hide=PATTERN : Exclude some entries from results.
+
+    PATTERN can be any shell pattern, from one file to a
+    widely encompassing glob*. ls will not print files
+    matching the pattern. 
+
+    You can have multiple uses of this flag in a command,
+    for example "ls --hide=m* --hide=*.pyc"
+
+    An important limitation to note is that it only hides
+    IMPLIED results. Anything that is explicitly listed as
+    a parameter will be included regardless of --hide flags.
+    For example, "ls --hide=m*" would hide the files 
+    "music" and "magic", "ls --hide=m* music" would just
+    hide magic, and "ls --hide=m* m*" would hide nothing.
+
+    All uses of --hide are always overridden by -a and -A,
+    no matter what order they are provided in the argument
+    list (see "mawn ls -a" and "mawn ls -A").

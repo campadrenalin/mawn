@@ -1,0 +1,7 @@
+FLAG --si : Human-readable sizes using powers of 1000.
+
+    This flag works exactly like -h does, only uses units
+    that are multiples of 1000 instead of 1024.
+
+    For more information, see "mawn ls --block-size" and
+    "mawn ls -h".
