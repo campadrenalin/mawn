@@ -7,7 +7,7 @@ WIDTH=`tput cols`;
 
 search() {
     if [ -d "${1}" ]; then
-        FILES="`grep -il ${2} ${1}/*`";
+        FILES="`grep -ile ${2} ${1}/*`";
         if [ -z "$FILES" ]; then
             echo "No matches were found.";
             return 1;
