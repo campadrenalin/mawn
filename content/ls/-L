@@ -1,0 +1,7 @@
+FLAG -L, --dereference : Resolve symlinks for output
+
+    When showing file information for a symbolic link, show
+    information for the file the link references rather
+    than for the link itself.
+
+    Useful when combined with -l.

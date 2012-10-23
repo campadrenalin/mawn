@@ -1,0 +1,4 @@
+FLAG -n, --numeric-uid-gid : List numeric user and group IDs.
+
+    Like -l, but list numeric user and group IDs for those
+    columns. Otherwise, same columns as -l.

@@ -1,0 +1,3 @@
+FLAG -m : Output as comma-separated list
+
+    Print entries separated by commas, instead of newlines.

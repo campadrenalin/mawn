@@ -1,0 +1,14 @@
+FLAG -N, --literal : Print raw entry names
+
+    Don't give control characters in entry names special
+    treatment or escaping. This means that if you have, for
+    example, some filenames that include terminal codes for
+    changing the color, those will actually change the
+    output color during output.
+
+    You usually don't want to do this, as printing random
+    characters without the protection of ls's automatic
+    escaping can really mess up your terminal state. If
+    that happens, you can probably fix most (if not all) of
+    the problems by running "reset", but don't be surprised
+    if your terminal state is beyond repair.

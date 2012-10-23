@@ -1,0 +1,36 @@
+FLAG -l : Use long listing format
+
+    Prints a lot more information per entry. Without other
+    modifying flags, this format prints the following
+    columns:
+
+File permissions (d---r-xrwx)
+
+    Lets you know the "type" of file (directory, device,
+    and so on), and its read/write/execute permissions.
+
+    See "mawn chmod" for more information.
+
+Number of hard links ( 2)
+
+    The number of paths in the filesystem that point to
+    this object.
+
+Owner name ( greg)
+
+    Every file has an owner and a group, for permissions.
+    This column tells you the owner of the file or dir.
+
+Group name ( debian-torrent)
+
+    See above. The group that the file or dir belongs to.
+
+Size ( 564)
+
+    File size. In bytes by default.
+
+    See "mawn ls -h" for more information about size units.
+
+Timestamp ( Oct 22 13:03)
+
+    Usually modification time by default.
